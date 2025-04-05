@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+//import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiSearch, FiFilter, FiUsers, FiCalendar, FiMessageSquare, FiStar, FiArrowRight } from 'react-icons/fi';
 import { mentors } from '@/data/mentors';

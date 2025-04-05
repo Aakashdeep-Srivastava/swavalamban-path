@@ -17,7 +17,7 @@ export const learningModules = [
       completion: "0%",
       progress: 0,
       points: 0,
-      image: "/images/courses/digital-marketing.jpg"
+      image: "/images/DigitalMarketing.jpg"
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ export const learningModules = [
       completion: "0%",
       progress: 0,
       points: 0,
-      image: "/images/courses/financial-management.jpg"
+      image: "/images/Financial-Management.jpg"
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ export const learningModules = [
       completion: "0%",
       progress: 0,
       points: 0,
-      image: "/images/courses/business-plan.jpg"
+      image: "/images/business-plan.jpg"
     },
     {
       id: 4,
@@ -75,7 +75,7 @@ export const learningModules = [
       completion: "0%",
       progress: 0,
       points: 0,
-      image: "/images/courses/supply-chain.jpg"
+      image: "/images/supply-chain.jpeg"
     },
     {
       id: 5,
@@ -94,6 +94,6 @@ export const learningModules = [
       completion: "0%",
       progress: 0,
       points: 0,
-      image: "/images/courses/leadership.jpg"
+      image: "/images/leadership.jpeg"
     }
   ];

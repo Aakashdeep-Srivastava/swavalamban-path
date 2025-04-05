@@ -13,7 +13,7 @@ export const masterclasses = [
         "Building customer loyalty through branding"
       ],
       videoUrl: "#",
-      thumbnail: "/images/masterclasses/branding.jpg",
+      thumbnail: "/images/vandan-luthra.jpeg",
       languages: ["English", "Hindi"]
     },
     {
@@ -29,7 +29,7 @@ export const masterclasses = [
         "Strategic partnerships for expansion"
       ],
       videoUrl: "#",
-      thumbnail: "/images/masterclasses/scaling.jpg",
+      thumbnail: "/images/Falguni Nayar.jpg",
       languages: ["English", "Hindi", "Tamil"]
     },
     {
@@ -45,7 +45,7 @@ export const masterclasses = [
         "Risk management in financial decisions"
       ],
       videoUrl: "#",
-      thumbnail: "/images/masterclasses/finance.jpg",
+      thumbnail: "/images/arundhati-bhattacharya.jpg",
       languages: ["English", "Hindi", "Bengali", "Marathi"]
     },
     {
@@ -61,7 +61,7 @@ export const masterclasses = [
         "Measuring marketing ROI"
       ],
       videoUrl: "#",
-      thumbnail: "/images/masterclasses/digital-marketing.jpg",
+      thumbnail: "/images/richa.jpeg",
       languages: ["English", "Hindi", "Telugu"]
     }
   ];

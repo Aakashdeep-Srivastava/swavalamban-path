@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Swavalamban Path</h3>
+            <h3 className="text-lg font-semibold mb-4">Udyamika</h3>
             <p className="text-indigo-200">
               Empowering women entrepreneurs across India with resources, mentorship, and funding opportunities.
             </p>
@@ -102,7 +102,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-indigo-800 text-center text-indigo-300">
-          <p>© {new Date().getFullYear()} Swavalamban Path. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Udyamika. All rights reserved.</p>
           <p className="mt-2">A project to empower women entrepreneurs in India.</p>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+//import Image from 'next/image';
 import { useAuth } from '@/contexts/AuthContext';
 import { usePathname } from 'next/navigation';
 import { FiMenu, FiX, FiUser, FiLogOut, FiHome, FiBook, FiUsers, FiDollarSign } from 'react-icons/fi';
@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-xl font-bold">Swavalamban Path</span>
+              <span className="text-xl font-bold">Udyamika</span>
             </Link>
           </div>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
               <div className="flex items-center">
                 <Link href="/dashboard" className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-indigo-100 hover:bg-indigo-700">
                   <FiUser className="mr-2" />
-                  {user.name}
+                  {user?.email}
                 </Link>
                 <button
                   onClick={logout}

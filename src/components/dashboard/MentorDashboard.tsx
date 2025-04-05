@@ -17,9 +17,35 @@ import {
     FiAward 
   } from 'react-icons/fi';
 
-const MentorDashboard = ({ user }) => {
-  const [upcomingSessions, setUpcomingSessions] = useState([]);
-  const [menteeRequests, setMenteeRequests] = useState([]);
+interface User {
+  name: string;
+  image?: string;
+  organization?: string;
+}
+
+interface UpcomingSession {
+  id: number;
+  mentee: string;
+  menteeImage: string | null;
+  date: string;
+  topic: string;
+  status: string;
+  businessType: string;
+}
+
+interface MenteeRequest {
+  id: number;
+  mentee: string;
+  menteeImage: string | null;
+  requestDate: string;
+  topic: string;
+  message: string;
+  businessType: string;
+}
+
+const MentorDashboard = ({ user }: { user: User }) => {
+  const [upcomingSessions, setUpcomingSessions] = useState<UpcomingSession[]>([]);
+  const [menteeRequests, setMenteeRequests] = useState<MenteeRequest[]>([]);
   const [stats, setStats] = useState({
     totalSessions: 0,
     totalMentees: 0,
@@ -106,7 +132,7 @@ const MentorDashboard = ({ user }) => {
   };
 
   // Format date function
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return new Intl.DateTimeFormat('en-IN', {
       day: 'numeric',
@@ -371,7 +397,7 @@ const MentorDashboard = ({ user }) => {
                         </div>
                         <div className="pl-14">
                           <p className="text-sm text-gray-600 mb-3">
-                            "{request.message}"
+                            &ldquo;{request.message}&rdquo;
                           </p>
                           <div className="flex space-x-3">
                             <button

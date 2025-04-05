@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
+
 import { motion } from 'framer-motion';
 import { FiAward, FiBook, FiUsers, FiDollarSign, FiChevronRight } from 'react-icons/fi';
 import PageLayout from '@/components/common/PageLayout';
@@ -57,7 +57,7 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      quote: "Swavalamban Path helped me navigate government schemes I didn't even know existed. Now my handicraft business is thriving with the financial support I received.",
+      quote: "Udyamika helped me navigate government schemes I didn't even know existed. Now my handicraft business is thriving with the financial support I received.",
       name: "Priya Sharma",
       role: "Founder, Kalakari Crafts",
       location: "Jaipur, Rajasthan"
@@ -78,48 +78,50 @@ export default function HomePage() {
 
   return (
     <PageLayout>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-900 to-indigo-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
-          <motion.div 
-            className="lg:w-1/2 mb-10 lg:mb-0"
-            initial="hidden"
-            animate="visible"
-            variants={fadeIn}
-          >
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              Empowering Women Entrepreneurs Across India
-            </h1>
-            <p className="mt-4 text-xl text-indigo-100">
-              Swavalamban Path provides resources, mentorship, and funding opportunities to help women entrepreneurs turn their vision into reality.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/register" className="btn-primary bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-md font-medium text-lg">
-                Join Now
-              </Link>
-              <Link href="#features" className="btn-secondary bg-transparent border border-white text-white hover:bg-indigo-800 px-6 py-3 rounded-md font-medium text-lg">
-                Learn More
-              </Link>
-            </div>
-          </motion.div>
-          <motion.div 
-            className="lg:w-1/2"
-            initial="hidden"
-            animate="visible"
-            variants={fadeIn}
-          >
-            <div className="relative h-64 sm:h-72 md:h-80 lg:h-96">
-              <Image 
-                src="/images/hero-image.jpg" 
-                alt="Women entrepreneurs working together" 
-                className="rounded-lg shadow-xl"
-                width={600}
-                height={400}
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    {/* Hero Section with Background Video */}
+<section className="relative bg-gradient-to-r from-indigo-900 to-indigo-700 text-white overflow-hidden">
+  {/* Background Video */}
+  <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+    <video 
+      className="absolute inset-0 min-w-full min-h-full object-cover opacity-30"
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src="/videos/Herov.mp4" type="video/mp4" />
+      {/* You can add multiple source elements for different video formats */}
+    </video>
+    {/* Overlay to ensure text remains readable */}
+    <div className="absolute inset-0 bg-indigo-900 opacity-60"></div>
+  </div>
+  
+  {/* Content (positioned above the video) */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+    <motion.div 
+      className="lg:w-1/2 mb-10 lg:mb-0"
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+    >
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        Empowering Women Entrepreneurs Across India
+      </h1>
+      <p className="mt-4 text-xl text-indigo-100">
+        Udyamika provides resources, mentorship, and funding opportunities to help women entrepreneurs turn their vision into reality.
+      </p>
+      <div className="mt-8 flex flex-wrap gap-4">
+        <Link href="/register" className="btn-primary bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-md font-medium text-lg">
+          Join Now
+        </Link>
+        <Link href="#features" className="btn-secondary bg-transparent border border-white text-white hover:bg-indigo-800 px-6 py-3 rounded-md font-medium text-lg">
+          Learn More
+        </Link>
+      </div>
+    </motion.div>
+   
+  </div>
+</section>
 
       {/* Features Section */}
       <section id="features" className="py-20 bg-gray-50">
@@ -132,7 +134,7 @@ export default function HomePage() {
             variants={fadeIn}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              How Swavalamban Path Helps You Succeed
+              How Udyamika Helps You Succeed
             </h2>
             <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
               We provide a comprehensive ecosystem of support for women entrepreneurs at every stage of their journey.
@@ -234,7 +236,7 @@ export default function HomePage() {
                     <p className="text-gray-600">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-700 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <p className="mt-4 text-gray-600 text-sm">{testimonial.location}</p>
               </motion.div>
             ))}
@@ -258,7 +260,7 @@ export default function HomePage() {
                   Ready to start your entrepreneurial journey?
                 </h2>
                 <p className="mt-3 text-lg text-gray-600">
-                  Join Swavalamban Path today and access resources tailored for women entrepreneurs.
+                  Join Udyamika today and access resources tailored for women entrepreneurs.
                 </p>
               </div>
               <div className="mt-8 md:mt-0 flex flex-col md:flex-row md:ml-8 space-y-4 md:space-y-0 md:space-x-4">

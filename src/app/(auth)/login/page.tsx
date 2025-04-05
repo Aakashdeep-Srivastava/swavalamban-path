@@ -23,7 +23,8 @@ export default function LoginPage() {
     }
   }, [isAuthenticated, router]);
 
-  const handleSubmit = async (e) => {
+  // Added proper React form event type
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError('');
     setIsLoading(true);
@@ -31,7 +32,7 @@ export default function LoginPage() {
     try {
       const result = await login(email, password);
       if (!result.success) {
-        setError(result.message);
+        setError(result.message || 'Login failed');
       } else {
         router.push('/dashboard');
       }
@@ -43,10 +44,14 @@ export default function LoginPage() {
     }
   };
 
-  const handleDemoLogin = async (role) => {
+  // Added proper typing for the role parameter
+  const handleDemoLogin = async (role: 'entrepreneur' | 'mentor') => {
     setIsLoading(true);
     try {
-      let demoCredentials = {};
+      let demoCredentials = {
+        email: '',
+        password: ''
+      };
       
       if (role === 'entrepreneur') {
         demoCredentials = {
@@ -62,7 +67,7 @@ export default function LoginPage() {
       
       const result = await login(demoCredentials.email, demoCredentials.password);
       if (!result.success) {
-        setError(result.message);
+        setError(result.message || 'Login failed');
       } else {
         router.push('/dashboard');
       }

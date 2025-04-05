@@ -14,7 +14,7 @@ export const governmentSchemes = [
       benefits: "Composite loan between ₹10 lakh to ₹1 crore for new enterprise setup",
       requiredDocuments: ["Identity Proof", "Address Proof", "Business Plan", "Project Report", "Caste Certificate (if applicable)"],
       category: "finance",
-      image: "/images/schemes/standup-india.jpg"
+      image: "/images/Stand-Up-India-Scheme.jpg"
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export const governmentSchemes = [
       benefits: "Collateral-free loans up to ₹10 lakh for micro enterprises",
       requiredDocuments: ["Identity Proof", "Address Proof", "Business Plan", "Proof of Business", "Bank Account Details"],
       category: "finance",
-      image: "/images/schemes/pmmy.jpg"
+      image: "/images/Pradhan-Mantri-Mudra-Yojana.jpg"
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ export const governmentSchemes = [
       benefits: "Loans up to ₹10 lakh with flexible repayment options",
       requiredDocuments: ["Identity Proof", "Address Proof", "Business Plan", "Project Report", "Experience Certificate"],
       category: "finance",
-      image: "/images/schemes/mahila-udyam-nidhi.jpg"
+      image: "/images/mahila-udami-yojan.jpg"
     },
     {
       id: 4,
@@ -62,7 +62,7 @@ export const governmentSchemes = [
       benefits: "Subsidy up to 35% for women entrepreneurs in rural areas",
       requiredDocuments: ["Identity Proof", "Address Proof", "Educational Qualification", "Project Report", "Self-Declaration"],
       category: "subsidy",
-      image: "/images/schemes/pmegp.jpg"
+      image: "/images/pmegp.jpg"
     },
     {
       id: 5,
@@ -78,7 +78,7 @@ export const governmentSchemes = [
       benefits: "Interest concession of 0.50% on loans above ₹2 lakh",
       requiredDocuments: ["Identity Proof", "Address Proof", "Business Registration", "Project Report", "Bank Account Details"],
       category: "finance",
-      image: "/images/schemes/stree-shakti.jpg"
+      image: "/images/Stree-Shakti-Yojana.jpg"
     },
     {
       id: 6,
@@ -94,7 +94,7 @@ export const governmentSchemes = [
       benefits: "Loan up to ₹50,000 with flexible repayment options",
       requiredDocuments: ["Identity Proof", "Address Proof", "Food License", "Business Plan", "Bank Account Details"],
       category: "finance",
-      image: "/images/schemes/annapurna-scheme.jpg"
+      image: "/images/annapurna-scheme.jpg"
     }
   ];
   

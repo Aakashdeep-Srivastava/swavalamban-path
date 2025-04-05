@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+//import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiSearch, FiFilter, FiDollarSign, FiTrendingUp, FiCalendar, FiFileText, FiArrowRight, FiCheckCircle } from 'react-icons/fi';
 import { financialResources } from '@/data/financial-resources';

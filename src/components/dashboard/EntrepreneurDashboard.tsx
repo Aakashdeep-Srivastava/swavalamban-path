@@ -8,9 +8,16 @@ import { FiCalendar, FiUser, FiBookmark, FiAward, FiCheckCircle, FiTrendingUp, F
 import { learningModules } from '@/data/courses';
 import { governmentSchemes } from '@/data/schemes';
 import { mentors } from '@/data/mentors';
-import { financialResources } from '@/data/financial-resources';
+interface User {
+  name: string;
+  image?: string;
+  business?: {
+    name: string;
+    location: string;
+  };
+}
 
-const EntrepreneurDashboard = ({ user }) => {
+const EntrepreneurDashboard = ({ user }: { user: User }) => {
   const [progressData, setProgressData] = useState({
     coursesInProgress: 0,
     coursesCompleted: 0,
@@ -18,18 +25,66 @@ const EntrepreneurDashboard = ({ user }) => {
     mentorSessions: 0,
   });
 
-  const [recommendedCourses, setRecommendedCourses] = useState([]);
-  const [recommendedSchemes, setRecommendedSchemes] = useState([]);
-  const [recommendedMentors, setRecommendedMentors] = useState([]);
-  const [upcomingMentorships, setUpcomingMentorships] = useState([]);
-  const [financialHealth, setFinancialHealth] = useState({
+  interface Course {
+    id: number;
+    title: string;
+    description: string;
+    duration: string;
+    level: string;
+    modules: string[];
+    languages: string[];
+    completion: string;
+    progress: number;
+    points: number;
+    image: string;
+  }
+
+  interface Scheme {
+    id: number;
+    title: string;
+    shortDescription: string;
+    eligibility: string;
+    applicationProcess: string[];
+    benefits: string;
+    requiredDocuments: string[];
+    category: string;
+    image: string;
+  }
+
+  interface Mentor {
+    id: number;
+    name: string;
+    title: string;
+    expertise: string[];
+    bio: string;
+    availability: string;
+    languages: string[];
+    rating: number;
+    reviews: number;
+    image: string;
+    category: string;
+  }
+
+  interface Mentorship {
+    id: number;
+    mentor: string;
+    date: string;
+    topic: string;
+    status: string;
+  }
+
+  const [recommendedCourses, setRecommendedCourses] = useState<Course[]>([]);
+  const [recommendedSchemes, setRecommendedSchemes] = useState<Scheme[]>([]);
+  const [recommendedMentors, setRecommendedMentors] = useState<Mentor[]>([]);
+  const [upcomingMentorships, setUpcomingMentorships] = useState<Mentorship[]>([]);
+  const financialHealth = {
     score: 72,
     insights: [
       'Good cash flow management',
       'Consider additional funding options',
       'Update financial documentation'
     ]
-  });
+  };
 
   useEffect(() => {
     // In a real app, these would come from API calls
@@ -87,7 +142,7 @@ const EntrepreneurDashboard = ({ user }) => {
   };
 
   // Format date function
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return new Intl.DateTimeFormat('en-IN', {
       day: 'numeric',
