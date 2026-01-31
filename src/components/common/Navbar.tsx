@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
 import { usePathname } from 'next/navigation';
 import { FiMenu, FiX, FiUser, FiLogOut, FiHome, FiBook, FiUsers, FiDollarSign } from 'react-icons/fi';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,6 +88,11 @@ const Navbar = () => {
                 </Link>
               </div>
             )}
+
+            {/* Language Switcher */}
+            <div className="ml-4">
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -159,6 +165,10 @@ const Navbar = () => {
                 >
                   Register
                 </Link>
+                {/* Mobile Language Switcher */}
+                <div className="px-3 py-2">
+                  <LanguageSwitcher />
+                </div>
               </div>
             )}
           </div>
